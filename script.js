@@ -5,7 +5,7 @@ myRequest.send();
 myRequest.onreadystatechange = function(){
     if (this.readyState == 4) {
         if (this.status == 200) {
-            console.log(this.responseText);
+            console.log(JSON.parse(this.responseText));
         } else{
             console.log("Error processing Request")
         }
