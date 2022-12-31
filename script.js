@@ -5,11 +5,9 @@ myRequest.send();
 myRequest.onreadystatechange = function(){
     if (this.readyState == 4) {
         if (this.status == 200) {
-            // Response was received and was successful
-        } else {
-            // Reponse was received but there might have been a problem
+            console.log(this.responseText);
+        } else{
+            console.log("Error processing Request")
         }
-    } else {
-        // Not ready yet
     }
 }
